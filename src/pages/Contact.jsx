@@ -97,14 +97,14 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch('https://rent-backend-2.onrender.com/api/contact', {
+      const response = await fetch('http://localhost:3000/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
-c
+
       const data = await response.json();
 
       if (data.success) {
