@@ -1,0 +1,259 @@
+/* Modern styles for car rental website */
+:root {
+  --primary-color: #f9a826;
+  --secondary-color: #000d6b;
+  --body-bg: #ffffff;
+  --card-bg: #ffffff;
+  --text-color: #1a1a1a;
+  --heading-color: #000d6b;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+  --hover-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  --gradient: linear-gradient(45deg, #f9a826, #ff7849);
+}
+
+/* Typography */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--body-bg);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  color: var(--heading-color);
+  letter-spacing: -0.02em;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Modern Card Styles */
+.modern-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.modern-card:hover {
+  box-shadow: var(--hover-shadow);
+  transform: translateY(-2px);
+}
+
+/* Modern Button Styles */
+.modern-btn {
+  background: var(--gradient);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+
+.modern-btn:hover::before {
+  transform: translateX(100%);
+}
+
+.modern-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Form Styles */
+.modern-form input,
+.modern-form select,
+.modern-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: var(--transition);
+  background: #f8f9fa;
+}
+
+.modern-form input:focus,
+.modern-form select:focus,
+.modern-form textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(249, 168, 38, 0.1);
+}
+
+/* Card Hover Effects */
+.car__item {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: var(--card-bg);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+}
+
+.car__item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.car__item img {
+  transition: var(--transition);
+}
+
+.car__item:hover img {
+  transform: scale(1.05);
+}
+
+/* Modern Alert Styles */
+.modern-alert {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modern-alert.success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.modern-alert.error {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+/* Loading Animation */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Grid Layout */
+.modern-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Stats Card */
+.stats-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.stats-card__number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.stats-card__label {
+  font-size: 1rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+  
+  .modern-card {
+    padding: 1.5rem;
+  }
+  
+  .modern-btn {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-color: #ffffff;
+    --heading-color: #ffffff;
+    --box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    --hover-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modern-form input,
+  .modern-form select,
+  .modern-form textarea {
+    background: #333;
+    border-color: #444;
+    color: #fff;
+  }
+  
+  .modern-form input:focus,
+  .modern-form select:focus,
+  .modern-form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(249, 168, 38, 0.2);
+  }
+}
