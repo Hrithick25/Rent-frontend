@@ -40,7 +40,7 @@ const Contact = () => {
 
   const validateForm = () => {
     // Email validation
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const emailRegex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
     if (!emailRegex.test(formData.email)) {
       setError('Please provide a valid email address');
       return false;
