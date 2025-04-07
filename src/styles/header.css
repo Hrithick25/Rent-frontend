@@ -2,6 +2,9 @@
   padding: 10px 0px;
   background: linear-gradient(to right, #1a1a2e, #16213e);
   color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 1010;
 }
 
 .header__top__left {
@@ -95,6 +98,9 @@
 .main__navbar {
   padding: 15px 0px;
   background: linear-gradient(to right, #1a1a2e, #16213e);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .mobile__menu i {

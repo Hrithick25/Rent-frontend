@@ -236,7 +236,7 @@ const Contact = () => {
 
                 <div className=" d-flex align-items-center gap-2">
                   <h6 className="mb-0 fs-6">Email:</h6>
-                  <p className="section__description mb-0">hrithick2503@gmail.com</p>
+                  <p className="section__description mb-0">Official@viruzverse.tech</p>
                 </div>
 
                 <h6 className="fw-bold mt-4">Follow Us</h6>
